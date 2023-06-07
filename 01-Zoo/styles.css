@@ -1,11 +1,11 @@
 @import url("../utils.css");
 
 :root {
-  --bg-colour: #d0e9e9;
-  --bg-colour-dark: #e9f5f5;
+  --bg-colour: #e9f5f5;
+  --bg-colour-dark: #d0e9e9;
   --main-colour: #348183;
   --main-colour-dark: #163636;
-  --main-colour-grayish: #163636;
+  --main-colour-grayish: #16363680;
   --secondary-colour: #dd9f39;
   --alpha: 29.57%;
   --faint-white: rgba(255 255 255 / var(--alpha));
@@ -23,6 +23,17 @@ span.section-title {
   font-weight: 700;
   display: block;
   margin-bottom: 20px;
+}
+.section-heading {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 3rem;
+}
+.section-heading.mini {
+  margin: 0 23px 50px;
+  line-height: 2rem;
+  font-size: 24px;
+  text-align: center;
 }
 
 .btn {
@@ -114,13 +125,7 @@ section#features .section-title {
   display: block;
   text-align: center;
 }
-section#features .section-title + p {
-  font-weight: 900;
-  font-size: 24px;
-  text-align: center;
-  line-height: 2rem;
-  margin: 0 23px 50px;
-}
+
 section#features .features-grid .icon {
   width: 6rem;
   height: 6rem;
@@ -148,7 +153,49 @@ section#features .features-grid .title {
   font-weight: 900;
   margin-bottom: 19px;
 }
+section#features .features-grid p:not(.title) {
+  color: var(--main-colour-grayish);
+}
 section#features .features-grid {
   line-height: 2rem;
   color: var(--main-colour-grayish);
 }
+/* FEATURES SECTION: END */
+
+/* ABOUT SECTION: START */
+section#about {
+  margin-top: 5rem;
+}
+section#about .image img {
+  max-width: 100%;
+}
+section#about .info {
+  padding: 0 23px;
+}
+section#about .info h2 + p {
+  margin: 13px 0 18px;
+  font-size: 1.25rem;
+  color: var(--main-colour-dark);
+  line-height: 2rem;
+}
+section#about ul {
+  margin-bottom: 2rem;
+}
+section#about li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+section#about li img {
+  margin-right: 0.5rem;
+}
+section#about li span {
+  color: var(--main-colour-grayish);
+}
+section#about ul + p {
+  color: var(--main-colour-grayish);
+}
+section#about ul + p > a {
+  color: var(--main-colour-dark);
+}
+/* ABOUT SECTION: END */
